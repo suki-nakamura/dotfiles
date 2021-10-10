@@ -27,3 +27,17 @@ config.set('content.cookies.accept', 'all', 'chrome-devtools://*')
 config.bind('M', 'hint links spawn mpv {hint-url}')
 config.bind('Z', 'hint links spawn st -e youtube-dl {hint-url}')
 
+
+# Validate SSL handshakes.
+# Valid values:
+#   - true
+#   - false
+#   - ask
+c.content.ssl_strict = True
+
+# A list of user stylesheet filenames to use.
+c.content.user_stylesheets = "user.css"
+
+# The directory to save downloads to. If unset, a sensible os-specific
+# default is used.
+c.downloads.location.directory = "/tmp/ape"
