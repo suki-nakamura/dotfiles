@@ -16,3 +16,14 @@ c.url.searchengines = {
     ':yt':      'https://www.youtube.com/results?search_query={}',
     ':wiki':       'https://en.wikipedia.org/wiki/{}',
 }
+
+# Valid values:
+#   - all: Accept all cookies.
+#   - no-3rdparty: Accept cookies from the same origin only. This is known to break some sites, such as GMail.
+#   - no-unknown-3rdparty: Accept cookies from the same origin only, unless a cookie is already set for the domain. On QtWebEngine, this is the same as no-3rdparty.
+#   - never: Don't accept cookies at all.
+config.set('content.cookies.accept', 'all', 'chrome-devtools://*')
+
+config.bind('M', 'hint links spawn mpv {hint-url}')
+config.bind('Z', 'hint links spawn st -e youtube-dl {hint-url}')
+
